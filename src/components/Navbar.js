@@ -7,42 +7,28 @@ import styled from 'styled-components';
 export default class Navbar extends Component{
     render(){
         return(
-
-            <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5">
-            {/*https://www.iconfinder.com/icons/1243689/call_phone_icon
-            Creative Commons (Attribution 3.0 Unported);
-            https://www.iconfinder.com/Makoto_msk */}
-            <Link to="/">
-                <img src={logo} alt="store" className="navbar-brand">
-                </img>
-            </Link>
-            <ul className="navbar-nav align-items-center">
-                <li className="nav-item ml-5">
-                    <Link to="/" className="nav-link">
-                        Productos
-                    </Link>
-                </li>
-            </ul>
-            <Link to="/cart" className="ml-auto">
-                <ButtonContainer>
-                    <span className="mr-2">
-                    <i className="fas fa-cart-plus">
-                    </i>
-                    </span>
-                    Canasta
-                </ButtonContainer>
-            </Link>
-            </NavWrapper>
+            <nav className="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div className="container">
+                <a className="navbar-brand">
+                    <img className="img-fluid" src={logo} alt="Fourth Coffee" />
+                </a>
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul className="navbar-nav flex-grow-1">
+                        <li className="nav-item">
+                            <a className="nav-link text-dark">Home</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link text-dark">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         )
     }
 }
 
-
-const NavWrapper = styled.nav`
-    background: var(--mainWhite);
-    .nav-link{
-        color:var(--mainWhite) !important;
-        font-size:1.3rem;
-        text-tranform: capitalize;
-    }
-`;
