@@ -15,7 +15,6 @@ export default class ProductList extends Component {
     componentDidMount() {
         axios.get('http://localhost:5000/api/feature')
         .then(response => {
-        console.log(response.data);
         this.setState({
             feature:response.data
         });
