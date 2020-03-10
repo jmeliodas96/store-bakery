@@ -20,10 +20,11 @@ export default class Product extends Component {
                         <div className="card-footer d-flex justify-content-between">
                             <p className="price float-left">${price}</p>
                             <Link to="/details">
-                                <a 
-                                    className="btn btn-sm btn-danger order-button float-right"
+                                <button className="btn btn-sm btn-danger order-button float-right"
                                     id={id} title={ "Order " + name}
-                                    onClick={() => value.handleDetail(id)}>Order Now</a>
+                                    onClick={() => value.handleDetail(id)}>
+                                        Order Now
+                                </button>
                             </Link>
                         </div>
                     </div>
